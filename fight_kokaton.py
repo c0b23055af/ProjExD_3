@@ -57,7 +57,7 @@ class Bird:
         self.img = __class__.imgs[(+5, 0)]
         self.rct: pg.Rect = self.img.get_rect()
         self.rct.center = xy
-        self.dire = (+5,0)
+        self.dire = (+5, 0)
 
     def change_img(self, num: int, screen: pg.Surface):
         """
