@@ -182,7 +182,7 @@ class Explosion:
         引数rct：ビームのRect
         """
         ep_img = pg.image.load("fig/explosion.gif")
-        ep_img0 = pg.transform.flip(ep_img, True, True)
+        ep_img0 = pg.transform.flip(ep_img, True, True) # 上下左右にflip
         self.ep_lst = [ep_img, ep_img0]
         self.rct = rct
         self.life = life
@@ -193,7 +193,7 @@ class Explosion:
         """
         if self.life > 0:
             self.life -= 1
-            screen.blit(self.ep_lst[self.life//10 % 2], self.rct)
+            screen.blit(self.ep_lst[self.life//10 % 2], self.rct) # 爆発演出
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
